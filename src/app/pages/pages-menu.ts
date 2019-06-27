@@ -11,5 +11,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-bar-chart',
     link: '/pages/blog',
     home: false,
-  }
+  },
 ];
