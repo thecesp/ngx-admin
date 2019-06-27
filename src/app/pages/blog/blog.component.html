@@ -1,0 +1,81 @@
+<div class="row">
+  <div class="col-md-2 col-lg-2 col-xxxl-2">
+    <nb-card class="stepper">
+      <nb-card-body>
+
+        <div class="vertical-container">
+          <div class="step selected">
+            <div class="label-index">
+              <span>1</span>
+            </div>
+            <div class="label">
+              <span>First step</span>
+            </div>
+          </div>
+          <div class="connector"></div>
+          <div class="step">
+              <div class="label-index">
+                <span>2</span>
+              </div>
+              <div class="label">
+                <span>Second step</span>
+              </div>
+            </div>
+        </div>
+
+
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-md-10 col-lg-10 col-xxxl-10">
+
+    <div class="row">
+
+      <div class="col-md-3 col-lg-3 col-xxxl-3" *ngFor="let course of udemy">
+
+        <nb-card>
+          <nb-card-body>
+
+            <div class="horizontal-container">
+              <h3>Learning from</h3>
+              <img class="udemy-logo" src="https://www.udemy.com/staticx/udemy/images/v6/logo-coral.svg" alt="Udemy" width="110" height="32">
+            </div>
+
+            <div class="horizontal-container">
+              <ngx-course [title]="course.title" [image]="course.image"
+                         [url]="course.url" [topics]="course.topics"></ngx-course>
+            </div>
+
+          </nb-card-body>
+        </nb-card>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-md-3 col-lg-3 col-xxxl-3" *ngFor="let course of kaggle">
+
+        <nb-card class="courses">
+          <nb-card-body>
+
+            <div class="horizontal-container">
+              <h3>Practice with</h3>
+              <img class="kaggle-logo" src="https://www.kaggle.com/static/images/site-logo.png" alt="Kaggle" width="110" height="32">
+            </div>
+
+            <div class="horizontal-container">
+              <ngx-course [title]="course.title" [image]="course.image"
+                         [url]="course.url" [topics]="course.topics"></ngx-course>
+            </div>
+
+          </nb-card-body>
+        </nb-card>
+
+      </div>
+
+
+    </div>
+
+  </div>
+</div>

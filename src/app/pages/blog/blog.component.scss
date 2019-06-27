@@ -1,0 +1,88 @@
+@import '../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+  /deep/ nb-stepper .step-content {
+    display: flex;
+    flex-direction: column;
+
+    button {
+      cursor: pointer;
+      margin: 0.5rem;
+    }
+  }
+
+  .stepper {
+    height: 200px;
+  }
+
+  .courses {
+
+  }
+
+  .horizontal-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    h3 {
+      margin: 0 0.5rem;
+    }
+
+    ngx-course {
+      margin: 1rem;
+    }
+  }
+
+  .vertical-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+
+    .step {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      color: #2ee56b;
+
+      .label-index {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border-color: #e4e9f2;
+        border-style: solid;
+        border-width: 1px;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .label {
+        margin: 0 10px;
+        color: #8f9bb3;
+        font-family: Open Sans, sans-serif;
+        font-size: 0.75rem;
+        font-weight: 800;
+        line-height: 1rem;
+      }
+    }
+
+    .connector {
+      flex: auto;
+      margin: 1rem;
+      width: 2px;
+      background-color: #edf1f7;
+    }
+
+  }
+
+  @include media-breakpoint-down(xs) {
+    .stepper {
+      display: none;
+    }
+  }
+}

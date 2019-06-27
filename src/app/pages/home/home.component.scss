@@ -1,0 +1,61 @@
+@import '../../@theme/styles/themes';
+
+@include nb-install-component() {
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+
+    nb-card-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 400px;
+      color: #8f9bb3;
+
+      h3 {
+        margin: 30px 0;
+      }
+
+      .picture {
+        background-image: url('https://avatars0.githubusercontent.com/u/2657289?s=250&v=4');
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        border-radius: 10rem;
+        display: flex;
+        width: 200px;
+        height: 200px;
+        border: 5px solid #ebeef2;
+      }
+
+    }
+
+    nb-card-footer {
+      display: flex;
+      justify-content: space-around;
+      padding: 0.75rem 0;
+      border: none;
+
+      a {
+        text-decoration: none;
+        color: nb-theme(color-fg);
+
+        &:hover {
+          color: nb-theme(color-fg-heading);
+        }
+
+        i {
+          font-size: 1.75rem;
+        }
+      }
+    }
+
+  }
+
+
+}
