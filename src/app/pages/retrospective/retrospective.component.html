@@ -1,0 +1,60 @@
+<div class="row tags">
+    <div class="tag text-{{item.accent}}" *ngFor="let item of tags">
+      <div class="color bg-{{item.accent}}"></div>
+      <div class="info">
+        <h5 class="text-{{item.accent}}">{{item.title}}</h5>
+        {{item.text}}
+      </div>
+    </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-2 col-lg-2 col-xxxl-2"></div>
+
+  <div class="col-md-8 col-lg-8 col-xxxl-8">
+
+    <div class="row items">
+      <div class="col-md-1 col-lg-1 col-xxxl-1"></div>
+      <div class="col-md-11 col-lg-11 col-xxxl-11">
+        <nb-card>
+          <nb-card-body>
+            <input type="text" nbInput placeholder="{{newItem.title}}">
+            <input type="text" nbInput placeholder="{{newItem.text}}">
+          </nb-card-body>
+          <nb-card-footer>
+            <form class="form-inline">
+              <input nbInput placeholder="Date" [nbDatepicker]="pickerFrom" fieldSize="small">
+              <nb-datepicker #pickerFrom ></nb-datepicker>
+              <nb-select multiple placeholder="Multiple Select">
+                <nb-option value="1">Option 1</nb-option>
+                <nb-option value="2">Option 2</nb-option>
+                <nb-option value="3">Option 3</nb-option>
+                <nb-option value="4">Option 4</nb-option>
+              </nb-select>
+              <div class="form-group row">
+                <div class="offset-sm-3 col-sm-9">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div>
+              </div>
+            </form>
+          </nb-card-footer>
+        </nb-card>
+      </div>
+    </div>
+
+    <div class="row items" *ngFor="let item of items">
+      <div class="col-md-1 col-lg-1 col-xxxl-1">
+        <button nbButton size="large" status="{{item.accent}}">{{item.year}}<br>{{item.month}}<br>{{item.day}}</button>
+      </div>
+      <div class="col-md-11 col-lg-11 col-xxxl-11">
+        <nb-card accent="{{item.accent}}">
+          <nb-card-header *ngIf="item.title">{{item.title}}</nb-card-header>
+          <nb-card-body>
+              {{item.text}}
+          </nb-card-body>
+        </nb-card>
+      </div>
+    </div>
+  </div>
+</div>

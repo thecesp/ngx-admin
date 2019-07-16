@@ -11,5 +11,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-bar-chart',
     link: '/pages/blog',
     home: false,
-  },
+  },  {
+    title: 'Retrospective',
+    icon: 'nb-sunny',
+    link: '/pages/retrospective',
+    home: false,
+  }
 ];

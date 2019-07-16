@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
+import { RetrospectiveComponent } from './retrospective/retrospective.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 
 const routes: Routes = [{
@@ -15,6 +16,9 @@ const routes: Routes = [{
   }, {
     path: 'blog',
     component: BlogComponent,
+  }, {
+    path: 'retrospective',
+    component: RetrospectiveComponent,
   }, {
     path: '',
     redirectTo: 'home',
