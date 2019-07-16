@@ -93,7 +93,7 @@ export class RetrospectiveComponent implements OnInit, OnDestroy {
       month: 'JUL',
       day: '16',
       accent: '',
-      topics: []
+      topics: [],
     };
   }
 

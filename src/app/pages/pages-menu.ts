@@ -16,5 +16,5 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-sunny',
     link: '/pages/retrospective',
     home: false,
-  }
+  },
 ];
